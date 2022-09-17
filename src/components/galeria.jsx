@@ -8,13 +8,14 @@ function Galery() {
   }, []);
 
   const getGalery = async () => {
-    const response = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand {number}", {
+    const response = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand", {
       headers: {
         Accept: "application/json",
       },
     });
     const data = await response.json();
     setGalery(data.galery);
+    console.log(data.galery)
   };
 
   return (

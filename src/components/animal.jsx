@@ -15,6 +15,7 @@ const getAnimal = async () => {
   });
   const data = await response.json();
     setAnimal(data.value);
+    console.log(data.value)
   };
 
   return (

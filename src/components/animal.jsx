@@ -8,7 +8,7 @@ function Animals() {
 }, []);
 
 const getAnimal = async () => {
-  const response = await fetch("https://zoo-animal-api.herokuapp.com/animal/rand", {
+  const response = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand", {
     headers: {
       Accept: "application/json",
    },

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 function Galery() {
-  const [galery, setGalery] = useState("Galery");
+  const [galery, setGalery] = useState([]);
 
   useEffect(() => {
     getGalery();
-  }, []);
+  }, [galery]);
 
   const getGalery = async () => {
     const response = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand", {
@@ -14,8 +14,8 @@ function Galery() {
       },
     });
     const data = await response.json();
-    setGalery(data.galery);
-    console.log(data.galery)
+    setGalery(data);
+    console.log(data)
   };
 
   return (
